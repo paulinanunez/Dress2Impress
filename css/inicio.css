@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+main {
+    height: auto;
+    background-color:rgb(242, 242, 242);
+    text-align: center;
+    padding: 25px;
+}
+
+section img {
+    width: 300px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+main .section-cards-body {
+    display: flex;
+    /* flex-wrap: nowrap; */
+    flex-wrap: wrap;
+
+    justify-content: space-evenly;
+}
+
+section {
+    border: 0.5 balck solid;
+    width: 350px;
+    padding: 15px;
+    background-color:#413f3e;
+    color: rgb(255, 255, 255);
+    margin: 25px;
+    border-radius: 1px;
+}
+
+section h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    font-family: "Playfair Display", serif;
+}
+
+.section-cards-header h1 {
+    color: #413f3e;
+    margin-bottom: 40px;
+    font-family: "Playfair Display", serif;
+    font-size: 50px;
+}
+
+.section-cards-body section p {
+    margin-bottom: 10px;
+}

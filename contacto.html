@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECommerce (contacto)</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+                <li> <a href="./index.html">Inicio</a> </li>
+                <li> <a href="./alta.html">Alta</a> </li>
+                <li> <a href="./carrito.html">Carrito</a> </li>
+                <li> <a href="./contacto.html">Contacto</a> </li>
+                <li> <a href="./nosotros.html">Nosotros</a> </li>
+            </ul>
+        </nav>
+        <div>
+            <div id="logo">Dress 2 Impress</div>
+            <div id="barra-busqueda">
+                <form action="#">
+                    <label for="Buscar"></label>
+                    <input type="text">
+                    <input type="submit" value="Buscar">
+                </form>
+            </div>
+            <div id="boton-carrito">Carrito</div>
+        </div>
+    </header>
+
+    <main>
+        <h1>Contacto</h1> 
+        <form onsubmit="SubmitEvent(event)" class="contacto-form">
+            
+            <div class="input-group">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" type="text" name="nombre">
+                <div class="error-detail"></div>
+            </div>
+
+        
+            <div class="input-group">
+                <label for="apellido">Apellido</label>
+                <input id="apellido" type="text" name="apellido">
+                <div class="error-detail"></div>
+            </div>
+
+            <!-- campo categoría -->
+            <div class="input-group">
+                <label for="mail">E-mail</label>
+                <input id="mail" type="mail" name="mail">
+                <div class="error-detail"></div>
+            </div>
+
+            <!-- campo detalles -->
+            <div class="input-group">
+                <label for="comentarios">Comentarios</label>
+                <input id="comentarios" type="message" name="comentarios">
+                <div class="error-detail"></div>
+            </div>
+
+            <input type="submit" value="Enviar" id="enviar-boton">
+
+        </form>
+    </main>
+
+
+    <footer>
+        <h3>Copyright 2024</h3>
+    </footer>
+
+    <script src="js/contacto.js"></script>
+    <script src="js/main.js"></script>    
+</body>
+</html>
