@@ -51,9 +51,15 @@ main input{
     height: 30px;
     background-color: white;
     color: #413f3e;
+    border-radius: 5px;
 }
  
+#comentarios{
+    background-color:#a8a8a8 ;
+    font-size: 20px;
+    font-family: "Playfair Display", serif;
 
+}
 
 main label {
     color: #ffffff;

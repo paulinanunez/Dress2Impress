@@ -2,7 +2,7 @@
 
 main {
     height: auto;
-    background-color:rgb(242, 242, 242);
+    background-color: rgb(242, 242, 242);
     text-align: center;
     padding: 25px;
 }
@@ -16,20 +16,25 @@ section img {
 
 main .section-cards-body {
     display: flex;
-    /* flex-wrap: nowrap; */
     flex-wrap: wrap;
-
     justify-content: space-evenly;
 }
 
 section {
-    border: 0.5 balck solid;
+    border: 0.5px solid black; /* Corregido de balck a black */
     width: 350px;
     padding: 15px;
-    background-color:#413f3e;
+    background-color: #413f3e;
     color: rgb(255, 255, 255);
     margin: 25px;
-    border-radius: 1px;
+    border-radius: 5px; /* Ajustado a 5px para mayor consistencia */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto al pasar el mouse */
+section:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
 }
 
 section h3 {
@@ -52,7 +57,11 @@ section h3 {
 button {
     margin-top: 20px;  
     padding: 10px 20px;         
-    height: 35px;                /* Altura del botón */
-    background-color: white;   /* Color de fondo */
-    color: #413f3e;                /* Color del texto */
+    height: 40px;                /* Altura del botón */
+    background-color: white;     /* Color de fondo */
+    color: #413f3e;              /* Color del texto */
+    font-family: "Playfair Display", serif; /* Fuente */
+    font-size: 20px;
+    border-radius: 5px;
+
 }

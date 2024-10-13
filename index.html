@@ -12,24 +12,24 @@
     <header>
         <nav class="header-nav">
             <ul>
-                   <li><a href="./index.html">Inicio</a></li>
-                   <li><a href="./alta.html">Alta</a></li>
-                   <li><a href="./carrito.html">Carrito</a></li>
-                   <li><a href="./contacto.html">Contacto</a></li>
-                   <li><a href="./nosotros.html">Nosotros</a></li>
-               </ul>
-           
-       </nav>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./alta.html">Alta</a></li>
+                <li><a href="./carrito.html">Carrito</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
         <div>
             <div id="logo">Dress 2 Impress</div>
             <div id="barra-busqueda">
                 <form action="#">
                     <label for="Buscar"></label>
-                    <input type="text">
+                    <input type="text" placeholder="Buscar">
                     <input type="submit" value="Buscar">
                 </form>
-
-            <a href="./carrito.html" id="boton-carrito">Carrito</a>
+                <a href="./carrito.html" id="boton-carrito">Carrito</a>
+            </div>
+        </div>
     </header>
 
     <main>
@@ -37,21 +37,18 @@
             <div class="section-cards-header">
                 <h1>Listado de Productos</h1>
             </div>
-            <!-- https://www.iconfinder.com/free_icons -->
             <div class="section-cards-body"></div>
         </div>
-
     </main>
-
 
     <footer>
         <h3>Copyright 2024</h3>
     </footer>
+   
+    
 
-    <script src="js/productos.js"></script>
-    <script src="js/inicio.js"></script>
-    <script src="js/main.js"></script>
-
-
+    <script src="js/productos.js"></script> <!-- Asegúrate de que este archivo contenga el array de productos -->
+    <script src="js/inicio.js"></script>   <!-- Asegúrate de que este archivo llame a representarCardsProductos -->
+    <script src="js/main.js"></script>     <!-- Verifica que este archivo no tenga conflictos -->
 </body>
 </html>

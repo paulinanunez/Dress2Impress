@@ -5,7 +5,8 @@ body, ul, h1, p {
 }
 
 body {
-    font-family: "Lora", serif; /* Fuente para el cuerpo */
+    font-family: "Playfair Display", serif; /* Fuente para el cuerpo */
+    font-size: 20px;
 }
 
 main {
@@ -66,11 +67,30 @@ header nav ul li a {
     line-height: 54px;           /* Centrar verticalmente el texto */
 }
 
+#cart-list {
+    list-style-type: none; /* Eliminar los puntos de la lista */
+    padding: 0;            /* Eliminar el padding */
+    margin: 0;             /* Eliminar el margen */
+}
+
+/* Ocultar la lista si está vacía */
+.carrito-container ul {
+    display: none; /* Ocultar por defecto */
+}
+
+.carrito-container ul:has(li) {
+    display: flex; /* Mostrar si hay al menos un li */
+}
+
 /* Estilo para los botones */
 button {
     margin-top: 20px;  
     padding: 10px 20px;         
-    height: 35px;                /* Altura del botón */
+    height: 50px;      
+    font-size: 20px;
+    font-family: "Playfair Display", serif; /* Fuente */
     background-color: #413f3e;   /* Color de fondo */
     color: white;                /* Color del texto */
+    border-radius: 5px;
+
 }

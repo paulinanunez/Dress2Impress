@@ -15,3 +15,8 @@ main h1 {
     font-size: 50px;
     color: #413f3e;
 }
+
+p{
+    font-size: 25px;
+    padding: 20px;
+}

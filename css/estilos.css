@@ -8,6 +8,7 @@ body, ul, h3, h1, p {
 
 body {
     font-family: "Lora", serif;
+    background-color: rgb(242, 242, 242);
 }
 
 header {
@@ -61,13 +62,13 @@ header > div {
 
 #logo {
     font-family: "Cookie", cursive; 
-    height: 54px;
+    height: 60px;
     width: 15%;
     background-color: #413f3e;
     color: white;
     text-align: center;
     line-height: 54px;
-    font-size: 50px;
+    font-size: 45px;
 }
 
 #barra-busqueda {
@@ -139,4 +140,6 @@ footer {
     height: 100px;             /* Altura del footer */
     text-align: center;       
     line-height: 100px;        /* Centrar texto verticalmente */
-    font-size: 22px;
+    font-size: 30px;
+}
+

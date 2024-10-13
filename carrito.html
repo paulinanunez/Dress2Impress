@@ -12,39 +12,37 @@
     <header>
         <nav class="header-nav">
             <ul>
-                   <li><a href="./index.html">Inicio</a></li>
-                   <li><a href="./alta.html">Alta</a></li>
-                   <li><a href="./carrito.html">Carrito</a></li>
-                   <li><a href="./contacto.html">Contacto</a></li>
-                   <li><a href="./nosotros.html">Nosotros</a></li>
-               </ul>
-           
-       </nav>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./alta.html">Alta</a></li>
+                <li><a href="./carrito.html">Carrito</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+                <li><a href="./nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
         <div>
             <div id="logo">Dress 2 Impress</div>
             <div id="barra-busqueda">
                 <form action="#">
                     <label for="Buscar"></label>
-                    <input type="text">
+                    <input type="text" placeholder="Buscar">
                     <input type="submit" value="Buscar">
                 </form>
-                
                 <a href="./carrito.html" id="boton-carrito">Carrito</a>
-        
+            </div>
+        </div>
     </header>
 
     <main>
         <h1>Tu Carrito</h1>
-        <ul id="cart-list"></ul>
+        <ul id="cart-list"></ul> <!-- Aquí se mostrará la lista de productos -->
         <button id="vaciar-carrito">Vaciar carrito</button>
-    
-        <script src="js/carrito.js"></script>
     </main>
-
-
+    
     <footer>
         <h3>Copyright 2024</h3>
     </footer>
+   
+    
 
     <script src="js/carrito.js"></script>
     <script src="js/main.js"></script>

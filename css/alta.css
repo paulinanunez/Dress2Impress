@@ -1,26 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: "Playfair Display", serif;
+    background-color: rgb(242, 242, 242);
+}
 
-
+/* Estilos para el main */
 main {
     height: auto;
-    background-color:rgb(242, 242, 242);
     text-align: center;
     padding: 25px;
 }
 
+/* Títulos principales */
 main h1 {
-    text-align: center;
-    font-family: "Playfair Display", serif;
     font-size: 50px;
     color: #413f3e;
 }
 
+main h2 {
+    font-size: 40px;
+    color: #413f3e;
+}
 
-
+/* Estilos para el formulario de alta */
 .alta-form {
     background-color: #413f3e;
-    font-family: "Playfair Display", serif;
     width: 80%;
     margin: 20px auto;
     padding: 30px;
@@ -32,8 +39,6 @@ main h1 {
 .input-group {
     text-align: center;
     padding: 3px;
-    
-    /* border: 1px solid cyan; */
 }
 
 main label {
@@ -41,35 +46,34 @@ main label {
     text-transform: capitalize;
     display: block;
     margin-bottom: 5px;
-    font-family: "Playfair Display", serif;
     font-size: 20px;
 }
 
 main label[for="envio"] {
-    display: inline-block;
+    display: inline-block; /* Corrección de 'inline-lock' a 'inline-block' */
     margin: 10px 0;
 }
 
 main button {
-    /* text-align: center; */
     display: block;
     margin: 15px auto;
-    font-family: "Playfair Display", serif;
     height: 40px;
     width: 40%;
     background-color: #ffffff;
     border-radius: 5px;
     font-size: 20px;
     color: #130f40;
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-family: "Playfair Display", serif; /* Fuente */
+
 }
 
 main input {
     width: 70%;
     height: 30px;
     border-radius: 5px;
-    background-color:#a8a8a8;
-    font-family: "Playfair Display", serif;
-    color: white;
+    background-color: #a8a8a8;
+    color: black; /* Cambiado a negro para mejor legibilidad */
     font-size: 20px;
 }
 
@@ -78,11 +82,15 @@ main input[type="checkbox"] {
     height: 20px;
 }
 
-/* ------------------------------ */
+/* Estilos para la tabla */
+table {
+    border-collapse: collapse;
+    margin: 5px auto;
+    width: 80%;
+}
+
 th, td {
     border: 1px solid #413f3e;
-    width: 80px;
-    height: 30px;
     padding: 10px;
 }
 
@@ -90,18 +98,11 @@ th {
     text-transform: uppercase;    
     background-color: #111;
     color: white;
-    /* border: 1px solid white; */
 }
 
-table {
-    border-collapse: collapse;
-    margin: 5px auto;
-    /* border: 1px solid white; */
+/* Imágenes en la tabla */
+td img {
+    width: 75px; /* Ajustar el tamaño de la imagen */
 }
 
-main h2 {
-    text-align: center;
-    font-family: "Playfair Display", serif;
-    color: #413f3e;
-    font-size: 40px;
-}
+
