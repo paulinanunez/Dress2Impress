@@ -10,15 +10,16 @@
 <body>
     
     <header>
-        <nav>
+        <nav class="header-nav">
             <ul>
-                <li> <a href="./index.html">Inicio</a> </li>
-                <li> <a href="./alta.html">Alta</a> </li>
-                <li> <a href="./carrito.html">Carrito</a> </li>
-                <li> <a href="./contacto.html">Contacto</a> </li>
-                <li> <a href="./nosotros.html">Nosotros</a> </li>
-            </ul>
-        </nav>
+                   <li><a href="./index.html">Inicio</a></li>
+                   <li><a href="./alta.html">Alta</a></li>
+                   <li><a href="./carrito.html">Carrito</a></li>
+                   <li><a href="./contacto.html">Contacto</a></li>
+                   <li><a href="./nosotros.html">Nosotros</a></li>
+               </ul>
+           
+       </nav>
         <div>
             <div id="logo">Dress 2 Impress</div>
             <div id="barra-busqueda">
@@ -27,47 +28,40 @@
                     <input type="text">
                     <input type="submit" value="Buscar">
                 </form>
-            </div>
-            <div id="boton-carrito">Carrito</div>
-        </div>
+        <a href="./carrito.html" id="boton-carrito">Carrito</a>
+        
     </header>
 
     <main>
         <h1>Contacto</h1> 
-        <form onsubmit="SubmitEvent(event)" class="contacto-form">
-            
+        <form id="contacto-form" class="contacto-form">
             <div class="input-group">
                 <label for="nombre">Nombre</label>
-                <input id="nombre" type="text" name="nombre">
+                <input id="nombre" type="text" name="nombre" required>
                 <div class="error-detail"></div>
             </div>
 
-        
             <div class="input-group">
                 <label for="apellido">Apellido</label>
-                <input id="apellido" type="text" name="apellido">
+                <input id="apellido" type="text" name="apellido" required>
                 <div class="error-detail"></div>
             </div>
 
-            <!-- campo categoría -->
             <div class="input-group">
                 <label for="mail">E-mail</label>
-                <input id="mail" type="mail" name="mail">
+                <input id="mail" type="email" name="mail" required>
                 <div class="error-detail"></div>
             </div>
 
-            <!-- campo detalles -->
             <div class="input-group">
                 <label for="comentarios">Comentarios</label>
-                <input id="comentarios" type="message" name="comentarios">
+                <textarea id="comentarios" name="comentarios" required></textarea>
                 <div class="error-detail"></div>
             </div>
 
             <input type="submit" value="Enviar" id="enviar-boton">
-
         </form>
     </main>
-
 
     <footer>
         <h3>Copyright 2024</h3>

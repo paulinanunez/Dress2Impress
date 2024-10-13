@@ -48,3 +48,11 @@ section h3 {
 .section-cards-body section p {
     margin-bottom: 10px;
 }
+
+button {
+    margin-top: 20px;  
+    padding: 10px 20px;         
+    height: 35px;                /* Altura del botón */
+    background-color: white;   /* Color de fondo */
+    color: #413f3e;                /* Color del texto */
+}

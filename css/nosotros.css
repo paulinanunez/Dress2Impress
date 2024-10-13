@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+
+main {
+    height: auto;
+    background-color:rgb(242, 242, 242);
+    text-align: center;
+    padding: 25px;
+}
+
+main h1 {
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-size: 50px;
+    color: #413f3e;
+}
