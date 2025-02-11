@@ -60,18 +60,39 @@
                 <div class="error-detail"></div>
             </div>
             <div class="input-group">
-                <label for="detalles">detalles</label>
-                <input id="detalles" type="text" name="detalles" placeholder="Detalles">
+                <label for="descripcion1">Descripción corta</label>
+                <input id="descripcion1" type="text" name="descripcion1" placeholder="Descripción corta">
                 <div class="error-detail"></div>
             </div>
+
+            <div class="input-group">
+                <label for="descripcion2">Descripción larga</label>
+                <input id="descripcion2" type="text" name="descripcion2" placeholder="Descripción larga">
+                <div class="error-detail"></div>
+            </div>
+
             <div class="input-group">
                 <label for="foto">foto</label>
                 <input id="foto" type="text" name="foto" placeholder="Url de imagen">
                 <div class="error-detail"></div>
             </div>
+
+            <div class="input-group">
+                <label for="edad-desde">edad-desde</label>
+                <input id="edad-desde" type="number" name="edad-desde" placeholder="Edad desde..." min="0">
+                <div class="error-detail"></div>
+            </div>
+            
+            <div class="input-group">
+                <label for="edad-hasta">edad-hasta</label>
+                <input id="edad-hasta" type="number" name="edad-hasta" placeholder="Edad hasta..." min="0">
+                <div class="error-detail"></div>
+            </div>
+            
+
             <div class="input-group">
                 <input id="envio" type="checkbox" name="envio">
-                <label for="envio">envío</label>
+                <label for="envio">Envío sin carga</label>
             </div>
             <button type="submit">Agregar</button>
         </form>

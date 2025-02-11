@@ -65,7 +65,6 @@ main button {
     color: #130f40;
     cursor: pointer; /* Cambia el cursor al pasar por encima */
     font-family: "Playfair Display", serif; /* Fuente */
-
 }
 
 main input {
@@ -94,6 +93,7 @@ th, td {
     padding: 10px;
 }
 
+/* Estilo para el encabezado de la tabla */
 th {
     text-transform: uppercase;    
     background-color: #111;
@@ -105,4 +105,8 @@ td img {
     width: 75px; /* Ajustar el tamaño de la imagen */
 }
 
-
+/* Estilo para la descripción larga */
+td:nth-child(7) { /* Se refiere a la columna de la descripción larga */
+    max-width: 200px; /* Establecer un ancho máximo */
+    word-wrap: break-word; /* Permitir el ajuste de palabras */
+}

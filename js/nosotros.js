@@ -1,12 +1,3 @@
-/* ------------------------------------ */
-/*          variables globales          */
-/* ------------------------------------ */
-
-
-/* ------------------------------------ */
-/*          funciones globales          */
-/* ------------------------------------ */
-
 function start() {
-    console.warn( document.querySelector('title').innerText )
+    console.warn(document.getElementsByTagName('title')[0].innerText);
 }

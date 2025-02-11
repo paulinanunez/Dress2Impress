@@ -1,67 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 body, ul, h3, h1, p {
     margin: 0;
 }
 
 body {
-    font-family: "Lora", serif;
+    font-family: "Lora", serif;  /* Standard font för hela body */
     background-color: rgb(242, 242, 242);
 }
 
 header {
-    /* border: 1px solid magenta; */
     width: 100%;
     height: auto;
 }
+
 header nav {
-    background-color: #413f3e;  /* Color de fondo del nav */
-    width: 100%;                 /* Ancho completo */
-    display: flex;               /* Usar flexbox */
-    justify-content: center;      /* Centrar contenido horizontalmente */
+    background-color: #413f3e;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 header nav ul {
-    width: 80%;                  /* Ancho de la lista */
-    list-style: none;            /* Eliminar puntos de la lista */
-    padding: 0;                  /* Eliminar padding */
-    margin: 0;                   /* Eliminar margen */
-    display: flex;               /* Usar flexbox */
-    justify-content: space-between; /* Espacio entre elementos */
+    width: 80%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
 }
 
 header nav ul li {
-    flex: 1;                     /* Cada li ocupará el mismo espacio */
+    flex: 1;
 }
 
 header nav ul li a {
-    text-decoration: none;        /* Sin subrayado en los enlaces */
-    height: 54px;                /* Altura del enlace */
-    display: block;              /* Mostrar como bloque */
-    background-color: #413f3e;   /* Color de fondo del enlace */
-    color: #ffffff;              /* Color del texto */
-    padding: 0 10px;             /* Relleno horizontal */
-    font-family: "Playfair Display", serif; /* Fuente */
-    font-size: 20px;             /* Tamaño de fuente */
-    text-align: center;          /* Centrar texto */
-    line-height: 54px;           /* Centrar verticalmente el texto */
+    text-decoration: none;
+    height: 54px;
+    display: block;
+    background-color: #413f3e;
+    color: #ffffff;
+    padding: 0 10px;
+    font-family: "Playfair Display", serif;
+    font-size: 20px;
+    text-align: center;
+    line-height: 54px;
 }
 
 /* -------------------------- */
 header > div {
     background-color: #413f3e;
     width: 100%;
-    /* height: 180px; */
-
     display: flex;
-    /* justify-content: space-around;
-    align-items: center; */
 }
 
 #logo {
-    font-family: "Cookie", cursive; 
+    font-family: "Cookie", cursive;  /* Specifik font för logotyp */
     height: 60px;
     width: 15%;
     background-color: #413f3e;
@@ -75,8 +71,6 @@ header > div {
     height: 54px;
     width: 85%;
     background-color: #413f3e;
-    /* text-align: center;
-    line-height: 54px; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,7 +80,6 @@ header > div {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid cyan; */
     width: 100%;
 }
 
@@ -101,16 +94,16 @@ header > div {
     margin-right: 50px;
     margin-bottom: 20px;
     font-family: "Playfair Display", serif;
-    
 }
 
+/* --------------------------- */
 #barra-busqueda form input {
     background-color: #a8a8a8;
     padding: 2px;
     width: 50%;
     color: white;
     height: 20px;
-    margin: 0 2px 0 5px;    
+    margin: 0 2px 0 5px;
     font-family: "Playfair Display", serif;
     font-size: 18px;
 }
@@ -134,12 +127,45 @@ main {
 
 /* --------------------------- */
 footer {
-    background-color: #413f3e; /* Color de fondo del footer */
-    font-family: "Cookie"; 
+    background-color: #413f3e;
+    font-family: "Cookie", cursive;  /* Font för footer */
     color: white;
-    height: 100px;             /* Altura del footer */
-    text-align: center;       
-    line-height: 100px;        /* Centrar texto verticalmente */
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
     font-size: 30px;
 }
 
+/* --------------------------- */
+/* Stilar för varukorg */
+.cantidad-control button {
+    background-color: #f76c6c; /* Röd bakgrund för ta bort-knappen */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+}
+
+.eliminar-btn {
+    background-color: #f76c6c;  /* Bakgrundsfärg för ta bort-knappen */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: "Playfair Display", serif;
+    font-size: 18px;
+}
+
+/* Specifika regler för input och knappar i varukorgen */
+.cantidad-control input {
+    background-color: #a8a8a8;
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    border: none;
+    font-family: "Playfair Display", serif;
+}

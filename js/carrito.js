@@ -1,67 +1,95 @@
-// Función principal que se ejecuta al cargar la página
-function start() {
-    console.warn(document.title);
-}
+// Simulering av produkter i varukorgen
+let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-// Función para cargar el carrito al inicio
-window.onload = function() {
-    cargarCarrito();
-};
+// Mostrar los productos en el carrito
+function mostrarCarrito() {
+    const cartList = document.getElementById("cart-list");
+    cartList.innerHTML = ''; // Rensa listan innan vi fyller på
 
-function cargarCarrito() {
-    // Obtener el carrito desde localStorage o inicializar como un array vacío
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    const cartList = document.getElementById('cart-list'); // Selección del elemento donde se mostrará el carrito
-    cartList.innerHTML = ''; // Limpiar contenido previo
-
-    // Verificar si el carrito está vacío
     if (carrito.length === 0) {
-        cartList.innerHTML = '<li>Tu carrito está vacío.</li>'; // Mensaje de carrito vacío
-    } else {
-        // Iterar sobre los productos en el carrito y mostrarlos en la lista
-        for (var i = 0; i < carrito.length; i++) {
-            const producto = carrito[i];
-            const li = document.createElement('li');
-            li.innerHTML = `
-                <strong>${producto.nombre}</strong> - $${producto.precio}
-                <button class="eliminar-btn" data-index="${i}">Eliminar</button>
-            `;
-            cartList.appendChild(li);
-        }
-        agregarEventosEliminar(); // Agregar eventos a los botones de eliminar
+        cartList.innerHTML = '<li>Tu carrito está vacío.</li>';
+        return;
     }
+
+    carrito.forEach((producto, index) => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            ${producto.nombre} - $${producto.precio} 
+            <input type="number" value="${producto.cantidad}" min="1" id="cantidad-${index}" />
+            <button onclick="eliminarProducto(${index})">Eliminar</button>
+        `;
+
+        // Lägg till event listener för att uppdatera mängden
+        const inputCantidad = li.querySelector(`#cantidad-${index}`);
+        inputCantidad.addEventListener('change', () => {
+            const nuevaCantidad = parseInt(inputCantidad.value, 10);
+            if (nuevaCantidad > 0) {
+                producto.cantidad = nuevaCantidad;
+                mostrarCarrito(); // Uppdatera varukorgen efter ändringen
+                guardarCarrito(); // Spara ändringarna till localStorage
+            } else {
+                alert("La cantidad debe ser al menos 1");
+                inputCantidad.value = producto.cantidad; // Återställ till ursprunglig mängd
+            }
+        });
+
+        cartList.appendChild(li);
+    });
 }
 
-// Función para eliminar productos del carrito
+// Eliminar producto del carrito
 function eliminarProducto(index) {
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    
-    // Eliminar el producto del array
-    carrito.splice(index, 1);
-    
-    // Guardar el carrito actualizado en localStorage
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-    
-    // Recargar la lista del carrito
-    cargarCarrito();
+    carrito.splice(index, 1); // Ta bort produkten vid det indexet
+    mostrarCarrito(); // Uppdatera varukorgen
+    guardarCarrito(); // Spara ändringarna till localStorage
 }
 
-// Función para agregar eventos a los botones de eliminar
-function agregarEventosEliminar() {
-    const botonesEliminar = document.getElementsByClassName('eliminar-btn');
-    
-    for (var i = 0; i < botonesEliminar.length; i++) {
-        botonesEliminar[i].onclick = function() {
-            const index = parseInt(this.getAttribute('data-index'), 10); // Obtener el índice del atributo data-index
-            eliminarProducto(index); // Llamar a la función de eliminar
-        };
-    }
+// Vaciar carrito
+document.getElementById("vaciar-carrito").addEventListener('click', () => {
+    carrito = []; // Rensa varukorgen
+    mostrarCarrito(); // Uppdatera varukorgen
+    guardarCarrito(); // Spara ändringarna till localStorage
+});
+
+// Guardar el carrito en el localStorage
+function guardarCarrito() {
+    localStorage.setItem('carrito', JSON.stringify(carrito)); // Spara varukorgen i localStorage
 }
 
-
-function vaciarCarrito() {
-    localStorage.removeItem('carrito');
-    cargarCarrito();
+// Agregar productos al carrito (ejemplo)
+function agregarProducto(nombre, precio) {
+    const producto = { nombre, precio, cantidad: 1 };
+    carrito.push(producto); // Lägg till produkten i varukorgen
+    mostrarCarrito(); // Uppdatera varukorgen
+    guardarCarrito(); // Spara varukorgen i localStorage
 }
 
-document.getElementById('vaciar-carrito').addEventListener('click', vaciarCarrito);
+// Mostrar carrito cuando la página se carga
+mostrarCarrito();
+
+// Función para guardar el carrito en la base de datos
+function guardarCarritoEnBaseDeDatos() {
+    const carritoData = {
+        productos: carrito,
+        total: carrito.reduce((total, producto) => total + producto.precio * producto.cantidad, 0)
+    };
+
+    fetch('http://localhost:5000/api/carrito', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(carritoData) // Skickar varukorgen som JSON till backend
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert('Carrito guardado correctamente');
+    })
+    .catch(error => {
+        console.error('Error al guardar el carrito:', error);
+        alert('Hubo un error al guardar el carrito');
+    });
+}
+
+// Lägg till en knapp för att spara varukorgen i MongoDB
+document.getElementById("guardar-carrito").addEventListener('click', guardarCarritoEnBaseDeDatos);

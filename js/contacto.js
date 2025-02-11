@@ -1,6 +1,5 @@
-
 function start() {
-    console.warn( document.querySelector('title').innerText )
+    console.warn(document.getElementsByTagName('title')[0].innerText);
 }
 
 // Obtener el formulario por su ID
@@ -25,3 +24,4 @@ formulario.addEventListener('submit', function(event) {
 
     // Aquí puedes agregar más lógica, como enviar los datos a un servidor
 });
+

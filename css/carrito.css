@@ -29,7 +29,7 @@ main h1 {
     flex-direction: column;      /* Colocar elementos en columna */
     align-items: center;         /* Centrar horizontalmente */
     justify-content: center;     /* Centrar verticalmente */
-    height: 100px;              /* Altura fija del contenedor */
+    height: 100px;               /* Altura fija del contenedor */
 }
 
 /* Estilo para el nav */
@@ -37,7 +37,7 @@ header nav {
     background-color: #413f3e;  /* Color de fondo del nav */
     width: 100%;                 /* Ancho completo */
     display: flex;               /* Usar flexbox */
-    justify-content: center;      /* Centrar contenido horizontalmente */
+    justify-content: center;     /* Centrar contenido horizontalmente */
 }
 
 header nav ul {
@@ -73,15 +73,6 @@ header nav ul li a {
     margin: 0;             /* Eliminar el margen */
 }
 
-/* Ocultar la lista si está vacía */
-.carrito-container ul {
-    display: none; /* Ocultar por defecto */
-}
-
-.carrito-container ul:has(li) {
-    display: flex; /* Mostrar si hay al menos un li */
-}
-
 /* Estilo para los botones */
 button {
     margin-top: 20px;  
@@ -92,5 +83,46 @@ button {
     background-color: #413f3e;   /* Color de fondo */
     color: white;                /* Color del texto */
     border-radius: 5px;
+}
 
+/* Estilo para el control de la cantidad */
+.cantidad-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.cantidad-control select {
+    font-size: 20px;
+    padding: 5px 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+}
+
+.cantidad-control button {
+    font-size: 20px;
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: #413f3e;
+    color: white;
+    border-radius: 5px;
+}
+
+.cantidad-control span {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+/* Estilo para el botón eliminar */
+.eliminar-btn {
+    background-color: #ff4040;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
 }

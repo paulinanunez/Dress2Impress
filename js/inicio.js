@@ -10,7 +10,7 @@ function representarCardsProductos() {
                 <p><b>Precio:</b> $${producto.precio}</p>
                 <p><b>Marca:</b> ${producto.marca}</p>
                 <p><b>Categoría:</b> ${producto.categoria}</p>
-                <p><b>Detalles:</b> ${producto.detalles}</p>
+                <p><b>Descripción Corta:</b> ${producto.descripcionCorta}</p>
                 <p><b>Stock:</b> ${producto.stock}</p>
                 <p><b>Envío:</b> ${producto.envio ? 'Sí' : 'No'}</p>
                 <button class="add-to-cart-btn" data-index="${i}">Añadir al carrito</button>
@@ -20,7 +20,9 @@ function representarCardsProductos() {
         cards = '<h2>No se encontraron productos para mostrar</h2>';
     }
 
-    document.querySelector('.section-cards-body').innerHTML = cards;
+    // Reemplazar el contenido de la sección de tarjetas
+    var sectionCardsBody = document.getElementsByClassName('section-cards-body')[0];
+    sectionCardsBody.innerHTML = cards;
 
     // Agregar eventos a los botones "Añadir al carrito"
     agregarEventosBotonesCarrito();
@@ -34,3 +36,4 @@ function start() {
 
 // Asegúrate de que start se ejecute cuando el DOM esté cargado
 document.addEventListener("DOMContentLoaded", start);
+
