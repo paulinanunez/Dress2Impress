@@ -133,3 +133,10 @@ Descripción larga: Un bolso de cuero negro que combina con cualquier atuendo. S
 No se sube el archivo .env al repositorio, por lo que se debe configurar manualmente.
 Para instalar dependencias, recuerda usar npm install en ambas carpetas (frontend/ y backend/).
 Si necesitas restablecer la base de datos, puedes eliminar los documentos manualmente desde MongoDB Atlas.
+
+Github: 
+https://github.com/paulinanunez/Dress2Impress.git
+
+Glitch:
+https://glitch.com/edit/#!/opaque-careful-opportunity?path=README.md%3A1%3A0
+
